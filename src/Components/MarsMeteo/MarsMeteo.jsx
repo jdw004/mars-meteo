@@ -19,7 +19,27 @@ const MarsMeteo = () => {
                     <img src={searchIcon} alt="" />
                 </div>
             </div>
-            
+            <div className="weather-image">
+                <img src={cloudIcon} alt="" />
+            </div>
+            <div className="weather-temp">24°C</div>
+            <div className="weather-locatoin">London</div>
+            <div className="data-container">
+                <div className="element">
+                    <img src={humidityIcon} alt="" className="icon"/>
+                    <div className="data">
+                        <diy className="humidity-percent">64%</diy>
+                        <div className="text">Humidity</div>
+                    </div>
+                </div>
+                <div className="element">
+                    <img src={windIcon} alt="" className="icon"/>
+                    <div className="data">
+                        <diy className="humidity-percent">20mph</diy>
+                        <div className="text">Wind Speed</div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
