@@ -116,9 +116,15 @@ const MarsMeteo = () => {
     }, [selected]);
     
 
-function getMinutesSinceMidnight() {
+function getMedTemp(max,min) {
+if(max&&min){
+    return (parseInt(max)+parseInt(min))/2;
+}
+else return 0;
+}
+function getMinutesSinceMidnight(){
     const now = new Date();
-    const hours = now.getHours();
+    const hours = now.getHours() - 4;
     const minutes = now.getMinutes();
     return hours * 60 + minutes;
   }
@@ -130,8 +136,7 @@ function getMinutesSinceMidnight() {
     } 
     return 0;
   }
-
-
+  
     const getWeatherIcon = () => {
         
         if(isSunset) {return sunsetIcon;}
@@ -161,8 +166,7 @@ function getMinutesSinceMidnight() {
             <div className="weather-image">
                 <img src={getWeatherIcon()} alt="" />
             </div>
-            <div className="weather-temp">{avgTemp}°C</div>
-            <div className="weather-location">MARS</div>
+            <div className="weather-temp">{getMedTemp(currDayData.max_temp,currDayData.min_temp)}°C</div>
             <div className="data-container">
                 <div className="element">
                 <img src={sunriseIcon} alt="" className="icon"/>
