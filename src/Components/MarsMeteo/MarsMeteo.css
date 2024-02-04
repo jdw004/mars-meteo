@@ -3,25 +3,6 @@
     margin-top: -17px;
     background-image: var(--dynamic-gradient); /* Default gradient */
 }
-.top-bar{
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    padding-top: 100px;
-}
-.top-bar input{
-    display: flex;
-    width: 30px;
-    height: 78px;
-    background: #ebfffc;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    padding-left: 40px;
-    color: #626262;
-    font-size: 20px;
-    font-weight: 400;
-}
 button {
     background-color: #49181d; 
     border: none;
