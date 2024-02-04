@@ -8,12 +8,40 @@ import sunnyIcon from '../Assets/sunny.png'
 import nightIcon from '../Assets/night.png'
 import sunsetIcon from '../Assets/sunset.png'
 
+
+
 const MarsMeteo = () => {
+
+    
+let currentTime = 0;
+let sunrise = 200;
+let sunset = 800;
+
+const isNightTime = () => {
+    return currentTime > sunset || currentTime < sunrise;
+  };
+    const getWeatherIcon = (sunrise, sunset, currentTime) => {
+        
+        if (Math.abs(currentTime - sunrise) < 30 || Math.abs(currentTime - sunset) < 30) {
+            return sunsetIcon; 
+        } else if(isNightTime()){
+            return nightIcon; 
+        }
+         else return sunnyIcon; 
+    };
+
+    const backgroundStyle = {
+        backgroundImage: isNightTime()
+          ? 'linear-gradient(180deg, #002855 0%, #87CEEB 100%)' // Night gradient
+          : 'linear-gradient(180deg, #cd450b 0%, #49181d 100%)', // Day gradient
+      };
+
     return (
-        <div className='container'>
+
+        <div className='container' style={backgroundStyle}>
             <MyComponent />
             <div className="weather-image">
-                <img src={sunnyIcon} alt="" />
+                <img src={getWeatherIcon(sunrise,sunset,currentTime)} alt="" />
             </div>
             <div className="weather-temp">24°C</div>
             <div className="weather-location">London</div>
