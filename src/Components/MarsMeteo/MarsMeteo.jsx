@@ -20,7 +20,7 @@ const MyComponent = () => {
     const [selected, setSelected] = useState(false);
 
     return (
-        <div>
+        <div className='navbar'>
             <p id="toggle">
                 <button onClick={() => setSelected(true)}>Curiosity</button>
                 <button onClick={() => setSelected(false)}>Perseverance</button>     
