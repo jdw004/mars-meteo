@@ -5,7 +5,6 @@ import windy from '../Assets/windy.png'
 import windIcon from '../Assets/wind.png'
 import humidityIcon from '../Assets/humidity.png'
 import sunnyIcon from '../Assets/sunny.png'
-// import MyComponent from './MyComponent'; 
 import nightIcon from '../Assets/night.png'
 import sunsetIcon from '../Assets/sunset.png'
 
