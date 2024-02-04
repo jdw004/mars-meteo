@@ -1,3 +1,13 @@
+# Mars Meteo 
+A Mars weather web application developed with React, Node.js, and HTML/CSS
+
+A project that utilizes web scraping data gathered by NASA Mars Rovers at 
+https://mars.nasa.gov/mars2020/mission/weather/ 
+and   
+https://mars.nasa.gov/msl/mission/weather/
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
