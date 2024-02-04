@@ -44,6 +44,8 @@ const MarsMeteo = () => {
     const [currDayData, setCurrDayData] = useState({});
     const [CuriosityData, setCuriosityData] = useState({})
     const [PerseveranceData, setPerservanceData] = useState({})
+    const [isNight, setNight] = useState(false); 
+    const [isSunset, setSunset] = useState(false); 
     //const [avgTempC, setAvgTempC] = useState({})
     //const [avgTempP, setAvgTempP] = useState({})
     //const [avgTemp, setAvgTemp] = useState({})
@@ -92,37 +94,56 @@ const MarsMeteo = () => {
             fetchData()
     }, []);
     useEffect(() => {
+
+        
+
         if (selected){
             setCurrDayData(CuriosityData)
             //setAvgTemp(avgTempC)
         }
         else{
             setCurrDayData(PerseveranceData)
-            //setAvgTemp(avgTempP)
+            
+            //setMedianTemp(medianTempP)
         }
+
+        let currentTime = getMinutesSinceMidnight;
+        let sunriseTime = convertToMinutesSinceMidnight(currDayData.sunrise);
+        let sunsetTime = convertToMinutesSinceMidnight(currDayData.sunrset);
+
+        setNight(currentTime > sunsetTime || currentTime < sunriseTime);
+        setSunset(Math.abs(currentTime - sunriseTime) < 30 || Math.abs(currentTime - sunsetTime) < 30);
+
     }, [selected]);
     
-let currentTime = 0;
-let sunrise = 200;
-let sunset = 800;
 
-const isNightTime = () => {
-    return currentTime > sunset || currentTime < sunrise;
-};
-    const getWeatherIcon = (sunrise, sunset, currentTime) => {
+function getMinutesSinceMidnight() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    return hours * 60 + minutes;
+  }
+
+  function convertToMinutesSinceMidnight(timeString) {
+    if(timeString){
+    const [hours, minutes] = timeString.split(':').map(Number);
+    return hours * 60 + minutes;
+    } 
+    return 0;
+  }
+
+
+    const getWeatherIcon = () => {
         
-        if (Math.abs(currentTime - sunrise) < 30 || Math.abs(currentTime - sunset) < 30) {
-            return sunset; 
-        } else if(isNightTime()){
-            return night; 
-        }
+        if(isSunset) {return sunsetIcon;}
+        if(isNight){return night;}
          else return sunny; 
     };
     
     
 
     const backgroundStyle = {
-        backgroundImage: isNightTime()
+        backgroundImage: isNight
           ? 'linear-gradient(180deg, #002855 0%, #87CEEB 100%)' // Night gradient
           : 'linear-gradient(180deg, #cd450b 0%, #49181d 100%)', // Day gradient
       };
@@ -136,10 +157,10 @@ const isNightTime = () => {
            
             <MyComponent selected={selected} setSelected={setSelected}/>
             
-            <div className = 'text'>{currDayData.terrestrial_date}</div>
+    
            
             <div className="weather-image">
-                <img src={getWeatherIcon(sunrise,sunset,currentTime)} alt="" />
+                <img src={getWeatherIcon()} alt="" />
             </div>
             <div className="weather-temp">{currDayData.min_temp}°C</div>
             <div className="data-container">
