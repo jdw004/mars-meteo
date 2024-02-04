@@ -85,14 +85,16 @@ button:active {
     gap: 16px;
 }
 .data{
-    font-size: 34px;
+    font-size: 30px;
     font-weight: 400;
 }
 .text{
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 400;
 }
 .icon{
+    width: 100px; 
+    height: 100px;
     margin-top: 10px;
 }
 .navbar{

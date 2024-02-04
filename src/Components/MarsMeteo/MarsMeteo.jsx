@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import './MarsMeteo.css';
 
-import windy from '../Assets/windy.png';
-import windIcon from '../Assets/wind.png';
-import humidityIcon from '../Assets/humidity.png';
-import sunnyIcon from '../Assets/sunny.png';
-import nightIcon from '../Assets/night.png';
 import sunsetIcon from '../Assets/sunset.png';
+import sunriseIcon from '../Assets/sunrise.png';
+import clockIcon from '../Assets/clock.png';
+import pressureIcon from '../Assets/pressure.png';
+
+import sunny from '../Assets/sunny.png';
+import night from '../Assets/night.png';
+import sunset from '../Assets/sunsetIcon.png';
+
+
 
 const RoverInfo = ({ selected }) => {
     if (selected) {
@@ -45,11 +49,11 @@ const isNightTime = () => {
     const getWeatherIcon = (sunrise, sunset, currentTime) => {
         
         if (Math.abs(currentTime - sunrise) < 30 || Math.abs(currentTime - sunset) < 30) {
-            return sunsetIcon; 
+            return sunset; 
         } else if(isNightTime()){
-            return nightIcon; 
+            return night; 
         }
-         else return sunnyIcon; 
+         else return sunny; 
     };
 
 
@@ -71,32 +75,34 @@ const isNightTime = () => {
             <div className="weather-location">Mars</div>
             <div className="data-container">
                 <div className="element">
-                    <img src={humidityIcon} alt="" className="icon"/>
+                <img src={sunriseIcon} alt="" className="icon"/>
                     <div className="data">
-                        <div className="humidity-percent">64%</div>
+                        <div className="numbers">0:00</div>
                         <div className="text">Sunrise</div>
                     </div>
                 </div>
                 <div className="element">
-                    <img src={humidityIcon} alt="" className="icon"/>
+                <img src={sunsetIcon} alt="" className="icon"/>
                     <div className="data">
-                        <div className="humidity-percent">64%</div>
+                        <div className="numbers">0:00</div>
                         <div className="text">Sunset</div>
                     </div>
+                   
                 </div>
                 <div className="element">
-                    <img src={humidityIcon} alt="" className="icon"/>
+                <img src={pressureIcon} alt="" className="icon"/>
                     <div className="data">
-                        <div className="humidity-percent">64%</div>
+                        <div className="numbers">0.00</div>
                         <div className="text">Pressure(Pa)</div>
                     </div>
                 </div>
                 <div className="element">
-                   <img src={windIcon} alt="" className="icon"/>
+                <img src={clockIcon} alt="" className="icon"/>
                     <div className="data">
-                        <div className="humidity-percent">20mph</div>
+                        <div className="numbers">0:00</div>
                         <div className="text">Sol</div>
                     </div>
+        
                 </div>
             </div>
         </div>
