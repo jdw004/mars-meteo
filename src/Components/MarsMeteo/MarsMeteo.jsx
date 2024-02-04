@@ -11,7 +11,6 @@ import sunsetIcon from '../Assets/sunset.png'
 const MarsMeteo = () => {
     return (
         <div className='container'>
-           
             <MyComponent />
             <div className="weather-image">
                 <img src={sunnyIcon} alt="" />
@@ -44,12 +43,14 @@ const MyComponent = (props) => {
     return (
         <div>
             <p id="toggle">
-                <button onClick={() => setSelected(true)}> Employer </button>
-                <button onClick={() => setSelected(false)}> Location </button>     
+                <button onClick={() => setSelected(true)}> Curiosity </button>
+                <button onClick={() => setSelected(false)}> Perseverance </button>     
             </p>
 
-            {(selected === true) && <div id="left"> ..input box 1</div>}
-            {(selected === false) && <div id="right"> ..input box 2</div>}
+            {(selected === true) && <div id="left"> 
+            Curiosity Rover</div>}
+            {(selected === false) && <div id="right"> 
+            Perseverance Rover</div>}
         </div>
     )
 }
