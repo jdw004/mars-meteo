@@ -46,9 +46,9 @@ const MarsMeteo = () => {
     const [PerseveranceData, setPerservanceData] = useState({})
     const [isNight, setNight] = useState(false); 
     const [isSunset, setSunset] = useState(false); 
-    //const [avgTempC, setAvgTempC] = useState({})
-    //const [avgTempP, setAvgTempP] = useState({})
-    //const [avgTemp, setAvgTemp] = useState({})
+    const [avgTempC, setAvgTempC] = useState({})
+    const [avgTempP, setAvgTempP] = useState({})
+    const [avgTemp, setAvgTemp] = useState({})
     //PERSERVANCE
     useEffect(() => {
         async function fetchData(){
@@ -67,10 +67,10 @@ const MarsMeteo = () => {
                 }));
                 let fetchPerservance = temperatureChart[6]//last entry in 7 day period
                 //use currDayData.sol, currDayData.sunrise, etc.
-                //let PavgTemp = (temperatureChart[6].max_temp+temperatureChart[6].min_temp)/2
+                let PavgTemp = (temperatureChart[6].max_temp+temperatureChart[6].min_temp)/2
                 
                 setPerservanceData(fetchPerservance)
-                //setAvgTempP(PavgTemp)
+                setAvgTempP(PavgTemp)
                 
                 //Curiosity
                 const CuriousResponse = await fetch("https://mars.nasa.gov/rss/api/?feed=weather&category=msl&feedtype=json");
@@ -86,10 +86,10 @@ const MarsMeteo = () => {
                 }));
                 
                 let fetchCurious = temperatureChart2[0]//most recent entry in 7 day period
-                //let CavgTemp = (temperatureChart2[0].max_temp+temperatureChart2[0].min_temp)/2
+                let CavgTemp = (parseInt(temperatureChart2[0].min_temp, 10) + parseInt(temperatureChart2[0].max_temp,10))/2
                 //use currDayData.sol, currDayData.sunrise, etc.
                 setCuriosityData(fetchCurious)
-                //setAvgTempC(CavgTemp)
+                setAvgTempC(CavgTemp)
             }
             fetchData()
     }, []);
@@ -99,12 +99,11 @@ const MarsMeteo = () => {
 
         if (selected){
             setCurrDayData(CuriosityData)
-            //setAvgTemp(avgTempC)
+            setAvgTemp(avgTempC)
         }
         else{
             setCurrDayData(PerseveranceData)
-            
-            //setMedianTemp(medianTempP)
+            setAvgTemp(avgTempP)
         }
 
         let currentTime = getMinutesSinceMidnight;
@@ -162,7 +161,8 @@ function getMinutesSinceMidnight() {
             <div className="weather-image">
                 <img src={getWeatherIcon()} alt="" />
             </div>
-            <div className="weather-temp">{currDayData.min_temp}°C</div>
+            <div className="weather-temp">{avgTemp}°C</div>
+            <div className="weather-location">MARS</div>
             <div className="data-container">
                 <div className="element">
                 <img src={sunriseIcon} alt="" className="icon"/>
