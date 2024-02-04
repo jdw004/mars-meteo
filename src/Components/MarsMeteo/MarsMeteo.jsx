@@ -41,7 +41,7 @@ let sunset = 800;
 
 const isNightTime = () => {
     return currentTime > sunset || currentTime < sunrise;
-  };
+};
     const getWeatherIcon = (sunrise, sunset, currentTime) => {
         
         if (Math.abs(currentTime - sunrise) < 30 || Math.abs(currentTime - sunset) < 30) {
@@ -51,6 +51,8 @@ const isNightTime = () => {
         }
          else return sunnyIcon; 
     };
+
+
 
     const backgroundStyle = {
         backgroundImage: isNightTime()
@@ -66,20 +68,34 @@ const isNightTime = () => {
                 <img src={getWeatherIcon(sunrise,sunset,currentTime)} alt="" />
             </div>
             <div className="weather-temp">24°C</div>
-            <div className="weather-location">MARS MF</div>
+            <div className="weather-location">Mars</div>
             <div className="data-container">
                 <div className="element">
                     <img src={humidityIcon} alt="" className="icon"/>
                     <div className="data">
                         <div className="humidity-percent">64%</div>
-                        <div className="text">Humidity</div>
+                        <div className="text">Sunrise</div>
+                    </div>
+                </div>
+                <div className="element">
+                    <img src={humidityIcon} alt="" className="icon"/>
+                    <div className="data">
+                        <div className="humidity-percent">64%</div>
+                        <div className="text">Sunset</div>
+                    </div>
+                </div>
+                <div className="element">
+                    <img src={humidityIcon} alt="" className="icon"/>
+                    <div className="data">
+                        <div className="humidity-percent">64%</div>
+                        <div className="text">Pressure(Pa)</div>
                     </div>
                 </div>
                 <div className="element">
                    <img src={windIcon} alt="" className="icon"/>
                     <div className="data">
                         <div className="humidity-percent">20mph</div>
-                        <div className="text">Wind Speed</div>
+                        <div className="text">Sol</div>
                     </div>
                 </div>
             </div>
