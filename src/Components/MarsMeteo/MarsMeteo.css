@@ -1,22 +1,8 @@
 .container{
     margin: auto;
 }
-<<<<<<< Updated upstream
-.top-bar{
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    padding-top: 100px;
-}
-.top-bar input{
-    display: flex;
-    width: 30px;
-    height: 78px;
-    background: #ebfffc;
-=======
 button {
     background-color: #49181d; 
->>>>>>> Stashed changes
     border: none;
     margin-top: 20px;
     color: white;
@@ -57,7 +43,6 @@ button {
     -webkit-user-select: none;
     vertical-align: middle; 
 }
-<<<<<<< Updated upstream
 button {
     background-color: #49181d; 
     border: none;
@@ -107,15 +92,6 @@ background-color: #44161b;
   color: #ffffff;
 }
 
-=======
-
-button:hover,
-.button-18:focus { 
-background-color: #44161b;
-  color: #ffffff;
-}
-
->>>>>>> Stashed changes
 button:active {
   background: #2a0e11;
   color: rgb(255, 255, 255, .7);
@@ -161,8 +137,4 @@ button:active {
 }
 .navbar{
     padding-top: 8rem;
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes
