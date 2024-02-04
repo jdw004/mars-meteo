@@ -1,7 +1,6 @@
 .container{
     margin: auto;
 }
-<<<<<<< Updated upstream
 .top-bar{
     display: flex;
     justify-content: center;
@@ -13,51 +12,14 @@
     width: 30px;
     height: 78px;
     background: #ebfffc;
-=======
-button {
-    background-color: #49181d; 
->>>>>>> Stashed changes
     border: none;
-    margin-top: 20px;
-    color: white;
-    padding: 27px 58px; 
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 29px; 
-    margin: 7px 4px; 
-    cursor: pointer;
-    transition-duration: 0.4s;    
-    width: 270px;
-    height: 90px; 
-    justify-content: center;
-    align-items: center;
-    align-items: center;
-    border-radius: 100px;
-    box-sizing: border-box;
-    color: #ffffff;
-    cursor: pointer;
-    display: inline-flex;
-    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
-    font-size: 25px;
-    font-weight: 600;
-    justify-content: center;
-    line-height: 20px;
-    max-width: 480px;
-    min-height: 40px;
-    min-width: 0px;
-    overflow: hidden;
-    padding: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-    touch-action: manipulation;
-    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-    user-select: none;
-    -webkit-user-select: none;
-    vertical-align: middle; 
+    outline: none;
+    border-radius: 40px;
+    padding-left: 40px;
+    color: #626262;
+    font-size: 20px;
+    font-weight: 400;
 }
-<<<<<<< Updated upstream
 button {
     background-color: #49181d; 
     border: none;
@@ -107,15 +69,6 @@ background-color: #44161b;
   color: #ffffff;
 }
 
-=======
-
-button:hover,
-.button-18:focus { 
-background-color: #44161b;
-  color: #ffffff;
-}
-
->>>>>>> Stashed changes
 button:active {
   background: #2a0e11;
   color: rgb(255, 255, 255, .7);
@@ -161,8 +114,4 @@ button:active {
 }
 .navbar{
     padding-top: 8rem;
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes
