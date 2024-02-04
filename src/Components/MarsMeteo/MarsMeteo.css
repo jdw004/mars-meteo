@@ -56,6 +56,10 @@ button:active {
   background: #2a0e11;
   color: rgb(255, 255, 255, .7);
 }
+button.selected {
+    background-color: #270d0f;
+}
+
 
 
 .weather-temp{
@@ -95,7 +99,7 @@ button:active {
 .icon{
     width: 100px; 
     height: 100px;
-    margin-top: 10px;
+    margin-top: -10px;
 }
 .navbar{
     padding-top: 8rem;

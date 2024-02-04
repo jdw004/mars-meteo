@@ -26,13 +26,11 @@ const RoverInfo = ({ selected }) => {
 };
 
 const MyComponent = ({selected, setSelected}) => {
-    
-
     return (
         <div className='navbar'>
             <p id="toggle">
-                <button onClick={() => setSelected(true)}>Curiosity</button>
-                <button onClick={() => setSelected(false)}>Perseverance</button>     
+                <button className={selected ? 'selected' : ''} onClick={() => setSelected(true)}>Curiosity</button>
+                <button className={!selected ? 'selected' : ''} onClick={() => setSelected(false)}>Perseverance</button>     
             </p>
             <RoverInfo selected={selected} />
         </div>
