@@ -25,6 +25,7 @@
 button {
     background-color: #49181d; 
     border: none;
+    margin-top: 20px;
     color: white;
     padding: 27px 58px; 
     text-align: center;
@@ -38,11 +39,44 @@ button {
     height: 90px; 
     justify-content: center;
     align-items: center;
+    align-items: center;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 20px;
+    max-width: 480px;
+    min-height: 40px;
+    min-width: 0px;
+    overflow: hidden;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle; 
 }
 
-button:hover {
-    background-color: #44161b;
+button:hover,
+.button-18:focus { 
+background-color: #44161b;
+  color: #ffffff;
 }
+
+button:active {
+  background: #2a0e11;
+  color: rgb(255, 255, 255, .7);
+}
+
+
 .weather-temp{
    display: flex;
    justify-content: center; 
@@ -61,7 +95,7 @@ button:hover {
     margin-top: 50px;
     color: white;
     display: flex;
-    justify-content: center;
+    padding-bottom: 8rem;
 }
 .element{
     margin: auto;
@@ -79,4 +113,7 @@ button:hover {
 }
 .icon{
     margin-top: 10px;
+}
+.navbar{
+    padding-top: 8rem;
 }
