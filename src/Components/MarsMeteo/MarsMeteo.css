@@ -25,6 +25,7 @@
 button {
     background-color: #49181d; 
     border: none;
+    margin-top: 20px;
     color: white;
     padding: 27px 58px; 
     text-align: center;
@@ -39,6 +40,8 @@ button {
     justify-content: center;
     align-items: center;
 }
+
+
 
 button:hover {
     background-color: #44161b;
