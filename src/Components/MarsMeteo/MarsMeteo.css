@@ -26,20 +26,18 @@ button {
     background-color: #49181d; 
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 27px 58px; 
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 29px; 
+    margin: 7px 4px; 
     cursor: pointer;
     transition-duration: 0.4s;    
-    width: 150px; 
-    height: 50px;  
+    width: 270px;
+    height: 90px; 
     justify-content: center;
     align-items: center;
-    
-    
 }
 
 button:hover {
