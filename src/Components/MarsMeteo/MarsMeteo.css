@@ -76,7 +76,7 @@ button:active {
     margin-top: 50px;
     color: white;
     display: flex;
-
+    padding-bottom: 8rem;
 }
 .element{
     margin: auto;
