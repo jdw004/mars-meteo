@@ -26,13 +26,11 @@ const RoverInfo = ({ selected }) => {
 };
 
 const MyComponent = ({selected, setSelected}) => {
-    
-
     return (
         <div className='navbar'>
             <p id="toggle">
-                <button onClick={() => setSelected(true)}>Curiosity</button>
-                <button onClick={() => setSelected(false)}>Perseverance</button>     
+                <button className={selected ? 'selected' : ''} onClick={() => setSelected(true)}>Curiosity</button>
+                <button className={!selected ? 'selected' : ''} onClick={() => setSelected(false)}>Perseverance</button>     
             </p>
             <RoverInfo selected={selected} />
         </div>
@@ -132,12 +130,18 @@ const isNightTime = () => {
     return (
         
         <div className='container' style={backgroundStyle}>
+        <div className="data">
+            <div className = 'title'>Mars Meteo</div>
+            </div>
+           
             <MyComponent selected={selected} setSelected={setSelected}/>
+            
+            <div className = 'text'>{currDayData.terrestrial_date}</div>
+           
             <div className="weather-image">
                 <img src={getWeatherIcon(sunrise,sunset,currentTime)} alt="" />
             </div>
             <div className="weather-temp">{currDayData.min_temp}°C</div>
-            <div className="weather-location">MARS</div>
             <div className="data-container">
                 <div className="element">
                 <img src={sunriseIcon} alt="" className="icon"/>
