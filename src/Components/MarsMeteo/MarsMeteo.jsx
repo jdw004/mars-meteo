@@ -107,11 +107,7 @@ const MarsMeteo = () => {
         }
 
         let currentTime = getMinutesSinceMidnight;
-        let sunriseTime = convertToMinutesSinceMidnight(currDayData.sunrise);
-        let sunsetTime = convertToMinutesSinceMidnight(currDayData.sunrset);
-
-        setNight(currentTime > sunsetTime || currentTime < sunriseTime);
-        setSunset(Math.abs(currentTime - sunriseTime) < 30 || Math.abs(currentTime - sunsetTime) < 30);
+         
 
     }, [selected]);
     
