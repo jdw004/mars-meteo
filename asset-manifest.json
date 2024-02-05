@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/mars-meteo/static/css/main.26d9ef53.css",
+    "main.js": "/mars-meteo/static/js/main.0681d412.js",
+    "static/js/592.960a3755.chunk.js": "/mars-meteo/static/js/592.960a3755.chunk.js",
+    "static/media/clock.png": "/mars-meteo/static/media/clock.346a929176c200a44c3e.png",
+    "static/media/sunsetIcon.png": "/mars-meteo/static/media/sunsetIcon.5dcfec1794597e31ee9b.png",
+    "static/media/night.png": "/mars-meteo/static/media/night.8f72a7a62be9adfd6ac4.png",
+    "static/media/sunny.png": "/mars-meteo/static/media/sunny.0b6974184b0ab79c8343.png",
+    "static/media/sunrise.png": "/mars-meteo/static/media/sunrise.39252da9b38ba7ee6b3c.png",
+    "static/media/pressure.png": "/mars-meteo/static/media/pressure.41146201b6a800ce7a6b.png",
+    "static/media/sunset.png": "/mars-meteo/static/media/sunset.fd20649c700e55c18cee.png",
+    "index.html": "/mars-meteo/index.html",
+    "main.26d9ef53.css.map": "/mars-meteo/static/css/main.26d9ef53.css.map",
+    "main.0681d412.js.map": "/mars-meteo/static/js/main.0681d412.js.map",
+    "592.960a3755.chunk.js.map": "/mars-meteo/static/js/592.960a3755.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.26d9ef53.css",
+    "static/js/main.0681d412.js"
+  ]
+}
