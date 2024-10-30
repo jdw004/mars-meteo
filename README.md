@@ -1,6 +1,8 @@
 # Mars Meteo 
 A Mars weather web application developed with React and HTML/CSS
 
+Project is hosted at https://eli-standard.github.io/Mars-Meteo/
+
 A project that utilizes web scraping data gathered by NASA Mars Rovers at 
 https://mars.nasa.gov/mars2020/mission/weather/ 
 and   
